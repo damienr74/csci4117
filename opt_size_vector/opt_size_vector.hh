@@ -11,6 +11,9 @@ namespace csci4117 {
 
 namespace impl {
 
+// Integer square root implementation runs in O(lg(n)) where n is the input to
+// solve for the square root.
+// def: sqrt(n)*sqrt(n) <= n
 template <class size_type = std::size_t>
 size_type sqrt(size_type n) {
   if (n < 2) return 1;
@@ -31,6 +34,9 @@ size_type sqrt(size_type n) {
 
 } // namespace impl
 
+// Implementation of optimal sized resizeable array. Auxilary memory: O(sqrt(n)).
+// - push_back(T e) O(1) amortized
+// - operator[](size_type i) O(1).
 template <class T>
 struct opt_size_vector {
 public:
@@ -38,6 +44,14 @@ public:
 
   opt_size_vector() : size_{0}, inode_cap_{0} {}
 
+  // Insert inodes and blocks as needed. The scheme is as follows:
+  //  The ith inode stores up to 1 << i elements. These elements are stored in
+  //  contiguous blocks of size O(sqrt(1 << i)).
+  //
+  // push_back adds inodes and blocks as required to fit size_++ elements in the
+  // data structure.
+  //
+  // Amortized O(1) time.
   void push_back(const T& e) {
     if (size_ == inode_cap_) {
       size_type cap = 1 << inodes_.size();
@@ -61,16 +75,19 @@ public:
     inode->blocks[ref.block].data[ref.offset] = e;
   }
 
+  // Random access of index i.
   const T& operator[](size_type i) const {
     const auto ref = get_addr(i+1);
     return inodes_[ref.inode]->blocks[ref.block].data[ref.offset];
   }
 
+  // Random access of index i.
   T& operator[](size_type i) {
     const auto ref = get_addr(i+1);
     return inodes_[ref.inode]->blocks[ref.block].data[ref.offset];
   }
 
+  // Number of elements in array.
   size_type size() const { return size; }
 
 private:
@@ -80,6 +97,10 @@ private:
     size_type offset;
   };
 
+  // get_addr returns an address_ref that acts as a layered pointer to access
+  // the data at index i.
+  //
+  // O(1) time.
   address_ref get_addr(size_type i) const {
     if (i == 0) {
       return address_ref{0, 0, 0};
@@ -94,6 +115,7 @@ private:
     return ref;
   }
 
+  // Data block that holds size contiguous items in memory.
   struct data_block {
     explicit data_block(size_type size) :
       data{std::make_unique<T[]>(size)},
@@ -112,6 +134,11 @@ private:
     const size_type size;
   };
 
+  // Inodes are used to map indices to powers of two for random access.
+  // each inode will contain O(sqrt(n)) blocks of O(sqrt(n)) size when
+  // completely utilized.
+  //
+  // Blocks are allocated dynamically.
   struct block_inode {
     block_inode(size_type block_size, size_type block_max_cap) :
       blocks{},
@@ -123,6 +150,7 @@ private:
     size_type block_max_cap;
   };
 
+  // inode array.
   std::vector<std::unique_ptr<block_inode>> inodes_;
   size_type size_;
   size_type inode_cap_;

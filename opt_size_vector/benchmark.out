@@ -1,4 +1,4 @@
-2018-09-17 21:05:26
+2018-09-17 21:49:41
 Running ./a.out
 Run on (4 X 3500 MHz CPU s)
 CPU Caches:
@@ -6,102 +6,102 @@ CPU Caches:
   L1 Instruction 32K (x2)
   L2 Unified 256K (x2)
   L3 Unified 4096K (x1)
-----------------------------------------------------------------------------------------------------
-Benchmark                                                             Time           CPU Iterations
-----------------------------------------------------------------------------------------------------
-BM_fill<int, vector<int>>/1                                          15 ns         15 ns   45885374
-BM_fill<int, vector<int>>/8                                          65 ns         65 ns   10829033
-BM_fill<int, vector<int>>/64                                        156 ns        156 ns    4497187
-BM_fill<int, vector<int>>/512                                       657 ns        657 ns    1061401
-BM_fill<int, vector<int>>/4096                                     4209 ns       4209 ns     166503
-BM_fill<int, vector<int>>/32768                                   68909 ns      68909 ns      10048
-BM_fill<int, vector<int>>/262144                                 728116 ns     728113 ns        948
-BM_fill<int, vector<int>>/2097152                               7144237 ns    7144252 ns         97
-BM_fill<int, vector<int>>/16777216                             59787823 ns   59786896 ns         12
-BM_fill<int, vector<int>>/134217728                           481896735 ns  481894678 ns          2
-BM_fill<int, vector<int>>/268435456                           964422070 ns  964414693 ns          1
-BM_fill<int, vector<int>>_BigO                                     3.59 f(N)       3.59 f(N) 
-BM_fill<int, vector<int>>_RMS                                         0 %          0 % 
-BM_fill<int, opt_size_array<int>>/1                                  74 ns         74 ns    9420499
-BM_fill<int, opt_size_array<int>>/8                                 410 ns        410 ns    1701501
-BM_fill<int, opt_size_array<int>>/64                               1637 ns       1637 ns     427690
-BM_fill<int, opt_size_array<int>>/512                              8230 ns       8230 ns      84865
-BM_fill<int, opt_size_array<int>>/4096                            57215 ns      57215 ns      12190
-BM_fill<int, opt_size_array<int>>/32768                          406822 ns     406819 ns       1722
-BM_fill<int, opt_size_array<int>>/262144                        3076650 ns    3076638 ns        228
-BM_fill<int, opt_size_array<int>>/2097152                      24157008 ns   24156691 ns         29
-BM_fill<int, opt_size_array<int>>/16777216                    211096784 ns  211094922 ns          3
-BM_fill<int, opt_size_array<int>>/134217728                  1682979874 ns 1682966046 ns          1
-BM_fill<int, opt_size_array<int>>/268435456                  3369007363 ns 3368985867 ns          1
-BM_fill<int, opt_size_array<int>>_BigO                            12.55 f(N)      12.55 f(N) 
-BM_fill<int, opt_size_array<int>>_RMS                                 0 %          0 % 
-BM_fill_and_read<int, vector<int>>/1                                 16 ns         16 ns   45153854
-BM_fill_and_read<int, vector<int>>/8                                 67 ns         67 ns   10474012
-BM_fill_and_read<int, vector<int>>/64                               162 ns        162 ns    4292204
-BM_fill_and_read<int, vector<int>>/512                              706 ns        706 ns     987917
-BM_fill_and_read<int, vector<int>>/4096                            4401 ns       4401 ns     158624
-BM_fill_and_read<int, vector<int>>/32768                          33379 ns      33380 ns      20844
-BM_fill_and_read<int, vector<int>>/262144                        271440 ns     271439 ns       2558
-BM_fill_and_read<int, vector<int>>/2097152                      2610815 ns    2610786 ns        264
-BM_fill_and_read<int, vector<int>>/16777216                    51402720 ns   51402832 ns         12
-BM_fill_and_read<int, vector<int>>/134217728                  481578470 ns  481572891 ns          2
-BM_fill_and_read<int, vector<int>>/268435456                  973958470 ns  973951791 ns          1
-BM_fill_and_read<int, vector<int>>_BigO                            3.62 f(N)       3.62 f(N) 
-BM_fill_and_read<int, vector<int>>_RMS                                3 %          3 % 
-BM_fill_and_read<int, opt_size_array<int>>/1                         82 ns         82 ns    8523759
-BM_fill_and_read<int, opt_size_array<int>>/8                        518 ns        518 ns    1349382
-BM_fill_and_read<int, opt_size_array<int>>/64                      2547 ns       2547 ns     274891
-BM_fill_and_read<int, opt_size_array<int>>/512                    15573 ns      15573 ns      45005
-BM_fill_and_read<int, opt_size_array<int>>/4096                  113662 ns     113662 ns       6153
-BM_fill_and_read<int, opt_size_array<int>>/32768                 870083 ns     870080 ns        802
-BM_fill_and_read<int, opt_size_array<int>>/262144               6821411 ns    6821424 ns        102
-BM_fill_and_read<int, opt_size_array<int>>/2097152             54102364 ns   54102507 ns         13
-BM_fill_and_read<int, opt_size_array<int>>/16777216           450202658 ns  450201085 ns          2
-BM_fill_and_read<int, opt_size_array<int>>/134217728         3602433742 ns 3602415729 ns          1
-BM_fill_and_read<int, opt_size_array<int>>/268435456         7188873795 ns 7188840857 ns          1
-BM_fill_and_read<int, opt_size_array<int>>_BigO                   26.79 f(N)      26.79 f(N) 
-BM_fill_and_read<int, opt_size_array<int>>_RMS                        0 %          0 % 
-BM_fill<fat_data, vector<fat_data>>/1                                35 ns         35 ns   20089226
-BM_fill<fat_data, vector<fat_data>>/8                               374 ns        374 ns    1861644
-BM_fill<fat_data, vector<fat_data>>/64                             4014 ns       4014 ns     173941
-BM_fill<fat_data, vector<fat_data>>/512                           35012 ns      35012 ns      19900
-BM_fill<fat_data, vector<fat_data>>/4096                         442571 ns     442564 ns       1597
-BM_fill<fat_data, vector<fat_data>>/32768                       4807941 ns    4807908 ns        128
-BM_fill<fat_data, vector<fat_data>>/262144                    122149596 ns  122149776 ns          6
-BM_fill<fat_data, vector<fat_data>>/2097152                  1059286736 ns 1059260981 ns          1
-BM_fill<fat_data, vector<fat_data>>/4194304                  2108381542 ns 2108363982 ns          1
-BM_fill<fat_data, vector<fat_data>>_BigO                         503.03 f(N)     503.02 f(N) 
-BM_fill<fat_data, vector<fat_data>>_RMS                               1 %          1 % 
-BM_fill<fat_data, opt_size_array<fat_data>>/1                       105 ns        105 ns    6612651
-BM_fill<fat_data, opt_size_array<fat_data>>/8                       750 ns        750 ns     925814
-BM_fill<fat_data, opt_size_array<fat_data>>/64                     4900 ns       4899 ns     137020
-BM_fill<fat_data, opt_size_array<fat_data>>/512                   31260 ns      31258 ns      22379
-BM_fill<fat_data, opt_size_array<fat_data>>/4096                 247423 ns     247421 ns       2829
-BM_fill<fat_data, opt_size_array<fat_data>>/32768               2337223 ns    2337188 ns        298
-BM_fill<fat_data, opt_size_array<fat_data>>/262144             80494233 ns   80470343 ns         10
-BM_fill<fat_data, opt_size_array<fat_data>>/2097152           638826891 ns  638828359 ns          1
-BM_fill<fat_data, opt_size_array<fat_data>>/4194304          1255510501 ns 1255500658 ns          1
-BM_fill<fat_data, opt_size_array<fat_data>>_BigO                 300.40 f(N)     300.40 f(N) 
-BM_fill<fat_data, opt_size_array<fat_data>>_RMS                       2 %          2 % 
-BM_fill_and_read<fat_data, vector<fat_data>>/1                       36 ns         36 ns   19702214
-BM_fill_and_read<fat_data, vector<fat_data>>/8                      378 ns        378 ns    1851691
-BM_fill_and_read<fat_data, vector<fat_data>>/64                    4035 ns       4035 ns     173539
-BM_fill_and_read<fat_data, vector<fat_data>>/512                  35134 ns      35134 ns      19920
-BM_fill_and_read<fat_data, vector<fat_data>>/4096                443834 ns     443835 ns       1585
-BM_fill_and_read<fat_data, vector<fat_data>>/32768              4807770 ns    4807693 ns        145
-BM_fill_and_read<fat_data, vector<fat_data>>/262144           122071437 ns  122071649 ns          6
-BM_fill_and_read<fat_data, vector<fat_data>>/2097152         1060122284 ns 1060108121 ns          1
-BM_fill_and_read<fat_data, vector<fat_data>>/4194304         2108000581 ns 2107733411 ns          1
-BM_fill_and_read<fat_data, vector<fat_data>>_BigO                503.04 f(N)     502.98 f(N) 
-BM_fill_and_read<fat_data, vector<fat_data>>_RMS                      1 %          1 % 
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>/1              116 ns        116 ns    5987518
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>/8              871 ns        871 ns     802788
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>/64            5867 ns       5867 ns     118352
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>/512          39003 ns      39003 ns      17968
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>/4096        314032 ns     314031 ns       2238
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>/32768      2830568 ns    2830575 ns        247
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>/262144    84172603 ns   84171662 ns         10
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>/2097152  669255662 ns  669235340 ns          1
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>/4194304 1322991219 ns 1322958749 ns          1
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>_BigO        316.17 f(N)     316.16 f(N) 
-BM_fill_and_read<fat_data, opt_size_array<fat_data>>_RMS              1 %          1 % 
+-----------------------------------------------------------------------------------------------------
+Benchmark                                                              Time           CPU Iterations
+-----------------------------------------------------------------------------------------------------
+BM_fill<int, vector<int>>/1                                           15 ns         15 ns   46033686
+BM_fill<int, vector<int>>/8                                           64 ns         64 ns   10750705
+BM_fill<int, vector<int>>/64                                         156 ns        156 ns    4492844
+BM_fill<int, vector<int>>/512                                        656 ns        656 ns    1059453
+BM_fill<int, vector<int>>/4096                                      4291 ns       4290 ns     166222
+BM_fill<int, vector<int>>/32768                                    68854 ns      68852 ns      10029
+BM_fill<int, vector<int>>/262144                                  726977 ns     726975 ns        946
+BM_fill<int, vector<int>>/2097152                                7138439 ns    7138398 ns         97
+BM_fill<int, vector<int>>/16777216                              59915610 ns   59915704 ns         12
+BM_fill<int, vector<int>>/134217728                            481298324 ns  481295100 ns          2
+BM_fill<int, vector<int>>/268435456                            965917949 ns  965901298 ns          1
+BM_fill<int, vector<int>>_BigO                                      3.60 f(N)       3.60 f(N)
+BM_fill<int, vector<int>>_RMS                                          0 %          0 %
+BM_fill<int, opt_size_vector<int>>/1                                  76 ns         76 ns    9297857
+BM_fill<int, opt_size_vector<int>>/8                                 419 ns        419 ns    1669694
+BM_fill<int, opt_size_vector<int>>/64                               1640 ns       1640 ns     423124
+BM_fill<int, opt_size_vector<int>>/512                              8209 ns       8209 ns      84684
+BM_fill<int, opt_size_vector<int>>/4096                            55568 ns      55568 ns      12119
+BM_fill<int, opt_size_vector<int>>/32768                          407044 ns     407042 ns       1721
+BM_fill<int, opt_size_vector<int>>/262144                        3089580 ns    3088602 ns        227
+BM_fill<int, opt_size_vector<int>>/2097152                      24212165 ns   24212223 ns         29
+BM_fill<int, opt_size_vector<int>>/16777216                    210886872 ns  210883423 ns          3
+BM_fill<int, opt_size_vector<int>>/134217728                  1683918786 ns 1683581927 ns          1
+BM_fill<int, opt_size_vector<int>>/268435456                  3390743860 ns 3390633552 ns          1
+BM_fill<int, opt_size_vector<int>>_BigO                            12.61 f(N)      12.61 f(N)
+BM_fill<int, opt_size_vector<int>>_RMS                                 1 %          1 %
+BM_fill_and_read<int, vector<int>>/1                                  16 ns         16 ns   45134455
+BM_fill_and_read<int, vector<int>>/8                                  67 ns         67 ns   10278228
+BM_fill_and_read<int, vector<int>>/64                                171 ns        171 ns    4093295
+BM_fill_and_read<int, vector<int>>/512                               706 ns        706 ns     966509
+BM_fill_and_read<int, vector<int>>/4096                             4407 ns       4407 ns     160363
+BM_fill_and_read<int, vector<int>>/32768                           34173 ns      34173 ns      20387
+BM_fill_and_read<int, vector<int>>/262144                         273486 ns     273473 ns       2554
+BM_fill_and_read<int, vector<int>>/2097152                       2620349 ns    2620332 ns        266
+BM_fill_and_read<int, vector<int>>/16777216                     51399363 ns   51399459 ns         12
+BM_fill_and_read<int, vector<int>>/134217728                   481698019 ns  481695096 ns          2
+BM_fill_and_read<int, vector<int>>/268435456                   976891611 ns  976823251 ns          1
+BM_fill_and_read<int, vector<int>>_BigO                             3.63 f(N)       3.63 f(N)
+BM_fill_and_read<int, vector<int>>_RMS                                 3 %          3 %
+BM_fill_and_read<int, opt_size_vector<int>>/1                         84 ns         84 ns    8422672
+BM_fill_and_read<int, opt_size_vector<int>>/8                        527 ns        527 ns    1328152
+BM_fill_and_read<int, opt_size_vector<int>>/64                      2578 ns       2578 ns     272345
+BM_fill_and_read<int, opt_size_vector<int>>/512                    15907 ns      15907 ns      43947
+BM_fill_and_read<int, opt_size_vector<int>>/4096                  114514 ns     114514 ns       6109
+BM_fill_and_read<int, opt_size_vector<int>>/32768                 872917 ns     872919 ns        796
+BM_fill_and_read<int, opt_size_vector<int>>/262144               6813725 ns    6813699 ns        102
+BM_fill_and_read<int, opt_size_vector<int>>/2097152             54089297 ns   54089493 ns         13
+BM_fill_and_read<int, opt_size_vector<int>>/16777216           449702360 ns  449699305 ns          2
+BM_fill_and_read<int, opt_size_vector<int>>/134217728         3597751529 ns 3597706005 ns          1
+BM_fill_and_read<int, opt_size_vector<int>>/268435456         7190141286 ns 7189803805 ns          1
+BM_fill_and_read<int, opt_size_vector<int>>_BigO                   26.79 f(N)      26.79 f(N)
+BM_fill_and_read<int, opt_size_vector<int>>_RMS                        0 %          0 %
+BM_fill<fat_data, vector<fat_data>>/1                                 31 ns         31 ns   22505212
+BM_fill<fat_data, vector<fat_data>>/8                                396 ns        396 ns    1841690
+BM_fill<fat_data, vector<fat_data>>/64                              4070 ns       4070 ns     171970
+BM_fill<fat_data, vector<fat_data>>/512                            36631 ns      36629 ns      19110
+BM_fill<fat_data, vector<fat_data>>/4096                          449987 ns     449988 ns       1556
+BM_fill<fat_data, vector<fat_data>>/32768                        4837314 ns    4837232 ns        127
+BM_fill<fat_data, vector<fat_data>>/262144                     122459025 ns  122455973 ns          6
+BM_fill<fat_data, vector<fat_data>>/2097152                   1058689105 ns 1058597300 ns          1
+BM_fill<fat_data, vector<fat_data>>/4194304                   2100938629 ns 2100828563 ns          1
+BM_fill<fat_data, vector<fat_data>>_BigO                          501.56 f(N)     501.53 f(N)
+BM_fill<fat_data, vector<fat_data>>_RMS                                2 %          2 %
+BM_fill<fat_data, opt_size_vector<fat_data>>/1                       107 ns        107 ns    6707128
+BM_fill<fat_data, opt_size_vector<fat_data>>/8                       766 ns        766 ns     909335
+BM_fill<fat_data, opt_size_vector<fat_data>>/64                     4898 ns       4898 ns     141809
+BM_fill<fat_data, opt_size_vector<fat_data>>/512                   32257 ns      32254 ns      21640
+BM_fill<fat_data, opt_size_vector<fat_data>>/4096                 253975 ns     253976 ns       2745
+BM_fill<fat_data, opt_size_vector<fat_data>>/32768               2409285 ns    2409270 ns        289
+BM_fill<fat_data, opt_size_vector<fat_data>>/262144             81032302 ns   81031923 ns         10
+BM_fill<fat_data, opt_size_vector<fat_data>>/2097152           643088605 ns  643075860 ns          1
+BM_fill<fat_data, opt_size_vector<fat_data>>/4194304          1253531765 ns 1253498999 ns          1
+BM_fill<fat_data, opt_size_vector<fat_data>>_BigO                 300.44 f(N)     300.43 f(N)
+BM_fill<fat_data, opt_size_vector<fat_data>>_RMS                       3 %          3 %
+BM_fill_and_read<fat_data, vector<fat_data>>/1                        33 ns         33 ns   21474057
+BM_fill_and_read<fat_data, vector<fat_data>>/8                       383 ns        383 ns    1829532
+BM_fill_and_read<fat_data, vector<fat_data>>/64                     4083 ns       4083 ns     171474
+BM_fill_and_read<fat_data, vector<fat_data>>/512                   36668 ns      36667 ns      19080
+BM_fill_and_read<fat_data, vector<fat_data>>/4096                 453556 ns     453554 ns       1577
+BM_fill_and_read<fat_data, vector<fat_data>>/32768               4845173 ns    4845186 ns        144
+BM_fill_and_read<fat_data, vector<fat_data>>/262144            122584323 ns  122584596 ns          6
+BM_fill_and_read<fat_data, vector<fat_data>>/2097152          1059958761 ns 1059844914 ns          1
+BM_fill_and_read<fat_data, vector<fat_data>>/4194304          2102691574 ns 2102294480 ns          1
+BM_fill_and_read<fat_data, vector<fat_data>>_BigO                 502.02 f(N)     501.93 f(N)
+BM_fill_and_read<fat_data, vector<fat_data>>_RMS                       2 %          2 %
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>/1              115 ns        115 ns    6225191
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>/8              869 ns        869 ns     803525
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>/64            5853 ns       5853 ns     118541
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>/512          39696 ns      39696 ns      17632
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>/4096        307769 ns     307767 ns       2269
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>/32768      2867364 ns    2867371 ns        244
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>/262144    84785372 ns   84783458 ns         10
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>/2097152  669307558 ns  669292627 ns          1
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>/4194304 1322251711 ns 1322237408 ns          1
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>_BigO        316.04 f(N)     316.04 f(N)
+BM_fill_and_read<fat_data, opt_size_vector<fat_data>>_RMS              2 %          2 %
